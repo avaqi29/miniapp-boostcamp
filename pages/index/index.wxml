@@ -1,4 +1,13 @@
 <!--index.wxml-->
-<view class="title">
-hello world!
+
+<view class='container'>
+  <view class="temperature">
+    12°
+  </view>
+
+  <view class="description">
+    晴天
+  </view>
+
+  <image class="weather-bg" src="/pics/sunny-bg.png" mode="scaleToFill"></image>
 </view>
