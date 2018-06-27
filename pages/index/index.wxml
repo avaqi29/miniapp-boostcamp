@@ -9,5 +9,5 @@
     {{wxml_weather}}
   </view>
 
-  <image class="weather-bg" src="/pics/sunny-bg.png" mode="scaleToFill"></image>
+  <image class="weather-bg" src="{{weather_pic}}" mode="scaleToFill"></image>
 </view>
