@@ -2,11 +2,11 @@
 
 <view class='container'>
   <view class="temperature">
-    12°
+    {{wxml_temperature}}
   </view>
 
   <view class="description">
-    晴天
+    {{wxml_weather}}
   </view>
 
   <image class="weather-bg" src="/pics/sunny-bg.png" mode="scaleToFill"></image>
