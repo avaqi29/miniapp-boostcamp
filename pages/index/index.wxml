@@ -1,6 +1,14 @@
 <!--index.wxml-->
 
 <view class='container'>
+  <view class="location-wrapper" bindtap='onTapLocation'>
+    <view class="location">
+      <image class="location-icon" src="/pics/location-icon.png"></image>
+      <view class="location-text">广州市</view>
+    </view>
+    <view class="location-tips">点击获取当前位置</view>
+  </view>
+
   <view class="temperature">
     {{wxml_temperature}}
   </view>
@@ -10,6 +18,13 @@
   </view>
 
   <image class="weather-bg" src="{{weather_pic}}" mode="scaleToFill"></image>
+
+  <view class="day-weather" bindtap = "onTapDayWeather">
+    <view class="day-text">{{todayDate}}</view>
+    <view class="temp-text">{{todayTemp}}</view>
+    <image class="arrow-icon" src="/pics/arrow.png"></image>
+  </view>
+
 </view>
 
 <view class="timetips">

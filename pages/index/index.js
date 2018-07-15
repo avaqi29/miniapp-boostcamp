@@ -45,7 +45,7 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/weather/now',
       data: {
-        city: '北京市',
+        city: '上海市',
       },
 
       success: res => {
@@ -54,6 +54,7 @@ Page({
         this.getMainView(result)
         //set forecast
         this.getListView(result)
+        this.setToday(result)
       },
       complete: () => {
         wx.stopPullDownRefresh()
@@ -92,5 +93,30 @@ Page({
     this.setData({
       forecast: forecast
     })
+  },
+  setToday(result) {
+    let date = new Date()
+    this.setData({
+      todayTemp: `${result.today.minTemp}° - ${result.today.maxTemp}°`,
+      todayDate: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 今天`
+    })
+  },
+
+  onTapDayWeather(){
+    wx.showToast({
+      title: 'dad',
+    })
+    wx.navigateTo({
+      url: '/pages/list/list',
+    })
+  },
+  onTapLocation() {
+    wx.getLocation({
+      success: res => {
+        console.log(res.latitude, res.longitude)
+      }
+    })
   }
+
+
 })
