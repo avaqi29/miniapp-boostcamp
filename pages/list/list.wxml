@@ -6,4 +6,4 @@
   </view>
   <view class="temp">{{item.temp}}</view>
   <image class="weather-icon" src="{{item.iconPath}}"></image>
-</view>
+</view> 

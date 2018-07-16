@@ -14,7 +14,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  onReady() {
+    console.log("onReady")
+  },
   onLoad () {
+    console.log("onLoad")
     this.getWeekWeather()
   
   },
